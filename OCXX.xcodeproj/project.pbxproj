@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3087A6AD16CA04A7003C4ADF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3087A6AC16CA04A7003C4ADF /* Foundation.framework */; };
-		3087A6B016CA04A7003C4ADF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6AF16CA04A7003C4ADF /* main.m */; };
+		3087A6B016CA04A7003C4ADF /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6AF16CA04A7003C4ADF /* main.mm */; };
 		3087A6B416CA04A7003C4ADF /* OCXX.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3087A6B316CA04A7003C4ADF /* OCXX.1 */; };
+		3087A6BC16CA04CB003C4ADF /* Hello.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6BA16CA04CB003C4ADF /* Hello.cpp */; };
+		3087A6BF16CA08B8003C4ADF /* OCClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3087A6BE16CA08B8003C4ADF /* OCClass.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +30,13 @@
 /* Begin PBXFileReference section */
 		3087A6A816CA04A7003C4ADF /* OCXX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCXX; sourceTree = BUILT_PRODUCTS_DIR; };
 		3087A6AC16CA04A7003C4ADF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3087A6AF16CA04A7003C4ADF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3087A6AF16CA04A7003C4ADF /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		3087A6B216CA04A7003C4ADF /* OCXX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCXX-Prefix.pch"; sourceTree = "<group>"; };
 		3087A6B316CA04A7003C4ADF /* OCXX.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = OCXX.1; sourceTree = "<group>"; };
+		3087A6BA16CA04CB003C4ADF /* Hello.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hello.cpp; sourceTree = "<group>"; };
+		3087A6BB16CA04CB003C4ADF /* Hello.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hello.h; sourceTree = "<group>"; };
+		3087A6BD16CA08B8003C4ADF /* OCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClass.h; sourceTree = "<group>"; };
+		3087A6BE16CA08B8003C4ADF /* OCClass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCClass.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +79,13 @@
 		3087A6AE16CA04A7003C4ADF /* OCXX */ = {
 			isa = PBXGroup;
 			children = (
-				3087A6AF16CA04A7003C4ADF /* main.m */,
+				3087A6AF16CA04A7003C4ADF /* main.mm */,
 				3087A6B316CA04A7003C4ADF /* OCXX.1 */,
 				3087A6B116CA04A7003C4ADF /* Supporting Files */,
+				3087A6BA16CA04CB003C4ADF /* Hello.cpp */,
+				3087A6BB16CA04CB003C4ADF /* Hello.h */,
+				3087A6BD16CA08B8003C4ADF /* OCClass.h */,
+				3087A6BE16CA08B8003C4ADF /* OCClass.mm */,
 			);
 			path = OCXX;
 			sourceTree = "<group>";
@@ -139,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3087A6B016CA04A7003C4ADF /* main.m in Sources */,
+				3087A6B016CA04A7003C4ADF /* main.mm in Sources */,
+				3087A6BC16CA04CB003C4ADF /* Hello.cpp in Sources */,
+				3087A6BF16CA08B8003C4ADF /* OCClass.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +214,7 @@
 		3087A6B816CA04A7003C4ADF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCXX/OCXX-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -211,6 +224,7 @@
 		3087A6B916CA04A7003C4ADF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCXX/OCXX-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
